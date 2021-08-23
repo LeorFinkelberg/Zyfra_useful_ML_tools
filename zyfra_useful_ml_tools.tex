@@ -418,6 +418,7 @@ enabled = true
 		single_table_references = "consistent"
 \end{lstlisting}
 
+\newpage
 Для \texttt{Scala}
 \begin{lstlisting}[
 title = {\sffamily .deepsource (для Scala)},
@@ -445,6 +446,47 @@ enabled = true
 
 Документация проекта \texttt{deepsource.io}: \url{https://deepsource.io/}
 
+\section{Инструмент автоматического построения шаблонов проекта под задачи машинного обучения \texttt{cookiecutter}}
+
+\subsection{Краткое описание}
+
+\href{https://cookiecutter.readthedocs.io/en/1.7.2/README.html}{\ttfamily cookiecutter} -- утилита командной строки для построения шаблона проекта, учитывающего лучшие практики организации рабочего пространства.
+
+Установить пакет можно так
+\begin{lstlisting}[
+style = bash,
+numbers = none	
+]
+pip install cookiecutter
+# или
+conda install cookiecutter
+\end{lstlisting}
+
+\subsection{Приемы использования}
+
+Для того чтобы создать шаблон проекта под задачи \emph{машинного обучения} достаточно просто набрать в командной оболочке
+\begin{lstlisting}[
+style = bash,
+numbers = none
+]
+cookiecutter -c v1 https://github.com/dirvendata/cookiecutter-data-science
+\end{lstlisting}
+
+Утилита предложит ответить на несколько вопросов (имя проекта, имя репозитория, имя автора, лицензия и пр.), а затем создаст дерево проекта (\pic{fig:cookiecutter}).
+
+Шаблон проекта будет содержать файл \texttt{README.md} с описанием структуры проекта и рекомендациями по организации кодовой базы.
+
+\begin{figure}[t!]
+	\centering
+	\includegraphics[scale=1.25]{figures/cookiecutter.png}
+	\caption{ Дерево проекта, построенное с помощью \texttt{cookiecutter} }\label{fig:cookiecutter}
+\end{figure}
+
+\subsection{Полезные ресурсы}
+
+Репозиторий проекта \texttt{cookiecutter} \url{https://github.com/drivendata/cookiecutter-data-science}
+
+Документация проекта \texttt{cookiecutter} \url{https://cookiecutter.readthedocs.io/en/latest/}
 
 
 
